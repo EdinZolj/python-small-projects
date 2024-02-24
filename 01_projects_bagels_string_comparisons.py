@@ -6,5 +6,5 @@
 6	Tags: short, game, puzzle"""		
 
 import random
-#test 
-#dcc
+
+NUM_DIGITS = 3 ' (!)'

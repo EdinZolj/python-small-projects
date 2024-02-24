@@ -23,20 +23,20 @@ When I say:     That means:
     Bagel       No digit is correct.
 
 For example, if the secret number was 248 and your guess was 843, the
-clues would be Fermi Pico.'''.format(NUM_DIGITS))                           # gleicher und neuere Methode mit F-String: print(f"I am thinking of a modern way like {NUM_DIGITS}-digit number.")
+clues would be Fermi Pico.'''.format(NUM_DIGITS))                           # gleich und neuere Methode mit F-String: print(f"I am thinking of a modern way like {NUM_DIGITS}-digit number.")
 
     while True:     #  Main game loop.
         # This stores the secret number the player needs to guess:
         secretNum = getSecretNum()
         print("I have thought up a number.")
-        print(" You have {} guesses to get it.".format(MAX_GUESSES))        # gleicher und neuere Methode mit F-String: print(f"You have {MAX_GUESSES} guesses to get it.")
+        print(" You have {} guesses to get it.".format(MAX_GUESSES))        # gleich und neuere Methode mit F-String: print(f"You have {MAX_GUESSES} guesses to get it.")
 
         numGuesses = 1
         while numGuesses <= MAX_GUESSES:
             guess = ""
             # Keep looping until they enter a valid guess:
             while len(guess) != NUM_DIGITS or not guess.isdecimal():
-                print("Guess #{}: ".format(numGuesses))                     # gleicher und neuere Methode mit F-String: print(f"Guess #{numGuesses}: ")
+                print("Guess #{}: ".format(numGuesses))                     # gleich und neuere Methode mit F-String: print(f"Guess #{numGuesses}: ")
                 guess = input('> ')
 
             clues = getClues(guess, secretNum)

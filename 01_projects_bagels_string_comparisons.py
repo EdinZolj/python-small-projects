@@ -54,3 +54,28 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))                           # gl
         if not input('> ').lower().startswith("y"):
             break
     print("Thanks for playing!")
+
+
+def getSecretNum():
+    """Return a string made up of NUM_DIGITS unique random digits."""
+    numbers = list("0123456789")    # Create a list of digits 0 to 9.
+    random.shuffle(numbers)         # Shuffle them into random order.
+
+    # Get the first NUM_DIGITS digits in the list for the secret number:
+    secretNum = ""
+    for i in range(NUM_DIGITS):
+        secretNum += str(numbers[i])
+    return secretNum
+
+
+def getClues(guess, secretNum):
+    """Returns a string with the pico, fermi, bagels clues fot a guess
+    and secret number pair."""
+    if guess == secretNum:
+        return "You got it!"
+    
+    clues = []
+
+    for i in range(len(guess)):
+        if guess[i] == secretNum[i]:
+            # A...

@@ -1,9 +1,10 @@
-"""Bagels, by Al Sweigart al@inventwithpython.com		
-2	A deductive logic game where you must guess a number based on clues.		
-3	This code is available at https://nostarch.com/big-book-small-python-programming		
-4	A version of this game is featured in the book, "Invent Your Own		
-5	Computer Games with Python" https://nostarch.com/inventwithpython		
-6	Tags: short, game, puzzle"""		
+"""Bagels, by Al Sweigart 
+al@inventwithpython.com		
+A deductive logic game where you must guess a number based on clues.		
+This code is available at https://nostarch.com/big-book-small-python-programming		
+A version of this game is featured in the book, "Invent Your Own		
+Computer Games with Python" https://nostarch.com/inventwithpython		
+Tags: short, game, puzzle"""		
 
 import random
 
@@ -16,7 +17,7 @@ def main():
 By Al Sweigart al@inventwithpython.com
 
 I am thinking of a {}-digit number with no repeated digits.
-Try to guess waht it is. Here are some clues:
+Try to guess what it is. Here are some clues:
 When I say:     That means:
     Pico        One digit is correct but in the wrong position.
     Fermi       One digit is correct and in the right position.
@@ -30,7 +31,7 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))                           # gl
         secretNum = getSecretNum()
         print("I have thought up a number.")
         print(" You have {} guesses to get it.".format(MAX_GUESSES))        # gleich und neuere Methode mit F-String: print(f"You have {MAX_GUESSES} guesses to get it.")
-
+        print(secretNum)    # !!!nur zum testen sichtbar gemacht!!!
         numGuesses = 1
         while numGuesses <= MAX_GUESSES:
             guess = ""
@@ -86,7 +87,7 @@ def getClues(guess, secretNum):
     if len(clues) == 0:
         return "Bagels" # There are no correct digits at all.
     else:
-        # Sort the clues into alphabeticaö order so their original order
+        # Sort the clues into alphabetical order so their original order
         # doesn't give information away.
         clues.sort()
         # Make a single string from the list of string clues.

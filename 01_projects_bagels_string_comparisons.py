@@ -78,4 +78,21 @@ def getClues(guess, secretNum):
 
     for i in range(len(guess)):
         if guess[i] == secretNum[i]:
-            # A...
+            # A correct digit is in the correct place.
+            clues.append("Fermi")
+        elif guess[i] in secretNum:
+            # A correct digit is in the incorrect place.
+            clues.append("Pico")
+    if len(clues) == 0:
+        return "Bagels" # There are no correct digits at all.
+    else:
+        # Sort the clues into alphabeticaö order so their original order
+        # doesn't give information away.
+        clues.sort()
+        # Make a single string from the list of string clues.
+        return "".join(clues)
+
+
+# If the program is run (instead of imported), run the game:
+if __name__ == '__main__':
+    main()

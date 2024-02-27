@@ -31,7 +31,7 @@ clues would be Fermi Pico.'''.format(NUM_DIGITS))                           # gl
         secretNum = getSecretNum()
         print("I have thought up a number.")
         print(" You have {} guesses to get it.".format(MAX_GUESSES))        # gleich und neuere Methode mit F-String: print(f"You have {MAX_GUESSES} guesses to get it.")
-        print(secretNum)    # !!!nur zum testen sichtbar gemacht!!!
+        #print(secretNum)    # !!!nur zum testen sichtbar gemacht!!!
         numGuesses = 1
         while numGuesses <= MAX_GUESSES:
             guess = ""
